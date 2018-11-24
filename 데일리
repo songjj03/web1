@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      #columns{
+        column-width:350px;
+        column-gap: 15px;
+      }
+      #columns figure{
+        display: inline-block;
+        border:1px solid rgba(0,0,0,0.2);
+        margin:0;
+        margin-bottom: 15px;
+        padding:10px;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.5);;
+      }
+      #columns figure img{
+        width:100%;
+      }
+      #columns figure figcaption{
+        border-top:1px solid rgba(0,0,0,0.2);
+        padding:10px;
+        margin-top:11px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="columns">
+      <figure>
+        <img src="사진/하트.jpg">
+        <figcaption>하트하트</figcaption>
+      </figure>
+
+      <figure>
+        <img src="사진/밀크티.jpg">
+        <figcaption>오묘했던 밀크티</figcaption>
+      </figure>
+
+      <figure>
+        <img src="사진/카페.jpg">
+        <figcaption>브로콜리</figcaption>
+      </figure>
+
+      <figure>
+        <img src="사진/같이.jpg">
+        <figcaption>빨려들어간다</figcaption>
+      </figure>
+
+      <figure>
+        <img src="사진/폴바셋.jpg">
+        <figcaption>부드러운 에그타르트</figcaption>
+      </figure>
+
+      <figure>
+        <img src="사진/신발.jpg">
+        <figcaption>분홍색 신발</figcaption>
+      </figure>
+
+      <figure>
+        <img src="사진/독수리.jpg">
+        <figcaption>이쁜짓</figcaption>
+      </figure>
+
+      <figure>
+        <img src="사진/옥수수.jpg">
+        <figcaption>사진 잘찍기 대결</figcaption>
+      </figure>
+
+      <figure>
+        <img src="사진/피자.jpg">
+        <figcaption>송이송이 피자</figcaption>
+      </figure>
+    </div>
+
+
+  </body>
+</html>
