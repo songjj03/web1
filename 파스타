@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<style>
+.thumbnail{
+  background-color:gray;
+  margin:10px;
+  width:150px;
+  height:150px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+}
+.thumbnail.round{
+  border-radius: 10%;
+}
+
+</style>
+
+</head>
+<body>
+  <a href = "#!파스타비디오" onclick="fetchPage('파스타비디오')"><div class="thumbnail round" style="background-image:url('thumbnail1.jpg')"></div></a>
+
+
+  <div id="article">
+
+
+    <br><br><br>
+<iframe location = "left=0" width="560" height="315" src= "https://www.youtube.com/embed/sBNQQReqq58" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   </div>
+   <script>
+
+var videos = {
+"first" : "https://www.youtube.com/embed/sBNQQReqq58",
+"second" : "https://www.youtube.com/embed/mAKsZ26SabQ"
+
+};
+
+document.write(videos.first);
+
+function play(number){
+document.write("videos[number]")
+
+};
+
+
+    function fetchPage(name){
+      fetch(name).then(function(response){
+        response.text().then(function(text){
+          document.querySelector('#article').innerHTML = text;
+        })
+      });
+    }
+    if(location.hash){
+       fetchPage(location.hash.substr(2));
+     } else {
+       fetchPage('welcome');
+     }
+
+    </script>
+</body>
+</html>
