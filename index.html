@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <title>banana shake</title>
+  <meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<script src="colors.js"></script>
+</head>
+<body>
+  <h1><a href="#!welcome" onclick="fetchPage('welcome')"><img src = "사진/바나나.png" width=110 height=65 align = "middle" hspace="20">바나나 쉐이크</a></h1>
+  <audio src="Humming Urban Stereo - Banana Shake.mp3" autoplay controls loop>
+</audio>
+<input id = night_day type="button" value="bright" onclick="
+nightdayhandler(this)
+">
+  <div id="grid">
+  <ul>
+      <li><a href="#!레시피" onclick="fetchPage('레시피')">레시피</a></li><br>
+      <li><a href="#!파스타" onclick="fetchPage('파스타')">파스타</a></li><br>
+      <li><a href="#!데일리" onclick="fetchPage('데일리')">데일리</a></li>
+  </ul>
+ <div id="article">
+
+    </div>
+  </div>
+  <script>
+   function fetchPage(name){
+     fetch(name).then(function(response){
+       response.text().then(function(text){
+         document.querySelector('#article').innerHTML = text;
+       })
+     });
+   }
+   if(location.hash){
+      fetchPage(location.hash.substr(2));
+    } else {
+      fetchPage('welcome');
+    }
+
+   </script>
+
+  </body>
+  </html>
